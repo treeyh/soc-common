@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  * @description 描述
  * @create 2019-05-20 10:22
  */
+@Component
 public class GracefulShutdownListener implements TomcatConnectorCustomizer, ApplicationListener<ContextClosedEvent> {
     private static final Logger logger = LoggerFactory.getLogger(GracefulShutdownListener.class);
 

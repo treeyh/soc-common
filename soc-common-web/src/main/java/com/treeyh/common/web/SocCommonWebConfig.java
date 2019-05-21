@@ -23,7 +23,7 @@ public class SocCommonWebConfig {
     private Integer innerIpType;
 
     /**
-     * 允许外网访问的url前缀列表，半角逗号分割，不填则不允许外网访问，默认不开启内网访问检测，例如：/api/callCenter/callback/
+     * 允许外网访问的url前缀列表，半角逗号分割，不填则不允许外网访问，默认不开启内网访问检测，例如：/api/user/
      */
     @Value("${soc.common.web.filter.request.internet-ip-urls:}")
     private String internetIpUrls;
