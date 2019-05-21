@@ -75,7 +75,7 @@ public class ReturnResult<T> implements Serializable {
     }
 
     public static <T>ReturnResult<T> success(T data){
-        return new ReturnResult<T>(ResultCode.SUCCESS, data);
+        return new ReturnResult<T>(data, ResultCode.SUCCESS);
     }
 
 
