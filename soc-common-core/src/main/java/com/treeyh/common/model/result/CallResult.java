@@ -21,7 +21,7 @@ public class CallResult<T> implements Serializable {
     /**
      * 返回的查询结果
      */
-    private T           businessResult;
+    private T result;
     /**
      * 返回异常信息
      */
@@ -34,13 +34,13 @@ public class CallResult<T> implements Serializable {
     private CallResult(
             boolean isSuccess,
             ResultCodeInfo  resultCodeInfo,
-            T businessResult,
+            T result,
             Throwable throwable,
             Object...args) {
         super();
         this.isSuccess = isSuccess;
         this.resultCodeInfo = resultCodeInfo;
-        this.businessResult = businessResult;
+        this.result = result;
         this.throwable = throwable;
         this.args = args;
     }
@@ -62,8 +62,8 @@ public class CallResult<T> implements Serializable {
         return resultCodeInfo;
     }
 
-    public T getBusinessResult() {
-        return businessResult;
+    public T getResult() {
+        return result;
     }
 
     public Throwable getThrowable() {
