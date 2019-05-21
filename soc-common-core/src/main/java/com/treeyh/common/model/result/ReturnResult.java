@@ -30,13 +30,14 @@ public class ReturnResult<T> implements Serializable {
         this(resultCodeInfo.getCode(), String.format(resultCodeInfo.getDesc(), args), null);
     }
 
-    public ReturnResult(ResultCodeInfo resultCodeInfo, T data){
+    public ReturnResult(T data, ResultCodeInfo resultCodeInfo){
         this(resultCodeInfo.getCode(), resultCodeInfo.getDesc(), data);
     }
 
     public ReturnResult(T data, ResultCodeInfo resultCodeInfo, Object... args){
         this(resultCodeInfo.getCode(), String.format(resultCodeInfo.getDesc(), args), data);
     }
+
     //解决多个构造函数的json转化冲突
     @JSONCreator
     public ReturnResult(Integer code, String message, T data) {

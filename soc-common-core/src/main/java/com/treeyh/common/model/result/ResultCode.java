@@ -15,6 +15,7 @@ public class ResultCode {
     public static ResultCodeInfo PATH_NOT_FOUND = new ResultCodeInfo(404, "PATH_NOT_FOUND", "请求地址不存在");
     public static ResultCodeInfo PARAM_ERROR = new ResultCodeInfo(501, "PARAM_ERROR", "请求参数错误");
     public static ResultCodeInfo INTERNAL_SERVER_ERROR = new ResultCodeInfo(500, "INTERNAL_SERVER_ERROR", "服务器异常");
+    public static ResultCodeInfo SYS_ERROR_MSG = new ResultCodeInfo(996, "SYS_ERROR_MSG", "系统异常, %s ");
     public static ResultCodeInfo FAILURE =  new ResultCodeInfo(997, "FAILURE", "业务失败");
     public static ResultCodeInfo SYS_ERROR = new ResultCodeInfo(998, "SYS_ERROR", "系统异常");
     public static ResultCodeInfo UNKNOWN_ERROR = new ResultCodeInfo(999, "UNKNOWN_ERROR", "未知错误");
