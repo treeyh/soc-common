@@ -6,7 +6,7 @@ package com.treeyh.common.constants;
  * @description 常量
  * @create 2019-05-17 11:47
  */
-public class SocCommonConstans {
+public class SocCommonConstants {
 
 
     public static final String UTF8 = "UTF-8";

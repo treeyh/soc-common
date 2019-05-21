@@ -1,6 +1,6 @@
 package com.treeyh.common.web.config;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.convert.converter.Converter;
@@ -37,7 +37,7 @@ public class StringDateConverter implements Converter<String, Date> {
                 if(_src.length() > 10){
                     return new Date(lTime);
                 }else{
-                    return new Date(SocCommonConstans.MILLISECOND_UNIT * lTime);
+                    return new Date(SocCommonConstants.MILLISECOND_UNIT * lTime);
                 }
             }catch(Exception e){
                 logger.error(e.getMessage(), e);

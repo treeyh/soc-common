@@ -1,6 +1,6 @@
 package com.treeyh.common.utils;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -221,7 +221,7 @@ public class DateUtils {
         if(format == null || format.isEmpty()){ format = "yyyy-MM-dd HH:mm:ss";}
         SimpleDateFormat sdf = new SimpleDateFormat(format);
 
-        return sdf.format(new Date(Long.valueOf(seconds * SocCommonConstans.MILLISECOND_UNIT)));
+        return sdf.format(new Date(Long.valueOf(seconds * SocCommonConstants.MILLISECOND_UNIT)));
     }
 
 

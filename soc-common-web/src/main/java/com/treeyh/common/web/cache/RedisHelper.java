@@ -1,6 +1,6 @@
 package com.treeyh.common.web.cache;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import com.treeyh.common.utils.JsonUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.slf4j.Logger;
@@ -420,7 +420,7 @@ public class RedisHelper {
      */
     public Boolean tryGetDistributedLock(String key, String value, Integer timeOut) {
         // 轮巡3个分布式锁周期
-        Long end = System.currentTimeMillis() + (timeOut * SocCommonConstans.MILLISECOND_UNIT * 3);
+        Long end = System.currentTimeMillis() + (timeOut * SocCommonConstants.MILLISECOND_UNIT * 3);
 
         while (true){
             if(System.currentTimeMillis() > end){

@@ -1,6 +1,5 @@
 package com.treeyh.common.web.filter;
 
-import com.treeyh.common.constants.SocCommonConstans;
 import com.treeyh.common.model.result.ResultCode;
 import com.treeyh.common.model.result.ReturnResult;
 import com.treeyh.common.utils.JsonUtils;

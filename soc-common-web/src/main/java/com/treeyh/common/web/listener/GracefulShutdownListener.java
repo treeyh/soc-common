@@ -1,6 +1,6 @@
 package com.treeyh.common.web.listener;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import com.treeyh.common.web.SocCommonWebConfig;
 import org.apache.catalina.connector.Connector;
 import org.slf4j.Logger;
@@ -48,7 +48,7 @@ public class GracefulShutdownListener implements TomcatConnectorCustomizer, Appl
         SocCommonWebConfig.SERVICE_RUN_STATUS = SocCommonWebConfig.SERVICE_RUN_STATUS_STOPPING;
         try {
             //sleep一段时间供负载均衡心跳捕获
-            Thread.sleep(webConfig.getStopWaitTime() * SocCommonConstans.MILLISECOND_UNIT);
+            Thread.sleep(webConfig.getStopWaitTime() * SocCommonConstants.MILLISECOND_UNIT);
         } catch (InterruptedException e) {
             logger.error(e.getMessage(), e);
         }

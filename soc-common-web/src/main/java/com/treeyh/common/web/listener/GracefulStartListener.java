@@ -1,6 +1,6 @@
 package com.treeyh.common.web.listener;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import com.treeyh.common.web.SocCommonWebConfig;
 import org.apache.catalina.connector.Connector;
 import org.slf4j.Logger;
@@ -45,7 +45,7 @@ public class GracefulStartListener implements TomcatConnectorCustomizer, Applica
 
         //设置5秒的启动缓冲接入时间
         try{
-            Thread.sleep(webConfig.getStartWaitTime() * SocCommonConstans.MILLISECOND_UNIT);
+            Thread.sleep(webConfig.getStartWaitTime() * SocCommonConstants.MILLISECOND_UNIT);
         } catch (InterruptedException e) {
             logger.error(e.getMessage(), e);
         }

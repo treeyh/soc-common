@@ -1,7 +1,8 @@
 package com.treeyh.common.web.filter;
 
-import com.treeyh.common.constants.SocCommonConstans;
+import com.treeyh.common.constants.SocCommonConstants;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.http.HttpServletResponse;
@@ -20,8 +21,8 @@ public abstract class BaseFilter extends OncePerRequestFilter {
     }
 
     protected void responseEnd(HttpServletResponse response, Integer httpStatus, String msg) throws IOException {
-        response.setCharacterEncoding(SocCommonConstans.UTF8);
-        response.setContentType(SocCommonConstans.HEADER_CONTENT_TYPE);
+        response.setCharacterEncoding(SocCommonConstants.UTF8);
+        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         response.setStatus(httpStatus);
         response.getWriter().append(msg).flush();
     }
