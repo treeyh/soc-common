@@ -44,7 +44,7 @@ public class RequestUriFilter extends BaseFilter {
 
         if("/checkHealth".equals(requestURI)){
             //心跳检测,直接返回
-            if(SocCommonWebConfig.SERVICE_RUN_STATUS.equals(SocCommonWebConfig.SERVICE_RUN_STATUS_STARTED)){
+            if(!SocCommonWebConfig.SERVICE_RUN_STATUS.equals(SocCommonWebConfig.SERVICE_RUN_STATUS_STARTED)){
                 //判断应用当前是否为不可用状态，如果是那么返回心跳 406 消息，从便于负载均衡摘除
                 this.responseEnd(httpServletResponse, HttpStatus.NOT_ACCEPTABLE.value(), "406");
                 return;

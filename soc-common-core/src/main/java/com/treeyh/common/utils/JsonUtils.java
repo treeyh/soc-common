@@ -6,6 +6,8 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Type;
+
 /**
  * @author TreeYH
  * @version 1.0
@@ -55,6 +57,21 @@ public class JsonUtils {
             return JSON.parseObject(json, type);
         }catch (Exception ex){
             logger.error("json decode error. json:"+json+";type:"+type.getType().getTypeName());
+            return null;
+        }
+    }
+
+    /**
+     * json转换为泛型
+     * @param json
+     * @param type
+     * @return
+     */
+    public static <T> T fromJson(String json, Type type){
+        try {
+            return JSON.parseObject(json, type);
+        }catch (Exception ex){
+            logger.error("json decode error. json:"+json+";type:"+type.getTypeName());
             return null;
         }
     }
