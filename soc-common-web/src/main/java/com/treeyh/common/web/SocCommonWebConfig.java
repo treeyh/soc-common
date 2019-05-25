@@ -1,5 +1,6 @@
 package com.treeyh.common.web;
 
+import com.treeyh.common.web.context.AppBeanContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * @create 2019-05-20 11:50
  */
 @Component
-public class SocCommonWebConfig {
+public class SocCommonWebConfig extends AppBeanContext {
 
 
     /**
@@ -124,5 +125,14 @@ public class SocCommonWebConfig {
             }
         }
         return internetAccessUrlList;
+    }
+
+    /**
+     * 获取当前环境名字
+     *
+     * @return
+     */
+    public String getCurrentEnv() {
+        return this.getApplicationContext().getEnvironment().getActiveProfiles()[0];
     }
 }
