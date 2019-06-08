@@ -391,7 +391,7 @@ public class RedisHelper {
 
 
     /**
-     * 分布式锁加锁脚本
+     * 分布式锁加锁脚本, 暂未考虑可重入机制
      */
     private static final String INCR_BY_WITH_TIMEOUT = "local v;" +
             "v = redis.call('setnx',KEYS[1],ARGV[1]);" +
