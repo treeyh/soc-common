@@ -62,6 +62,14 @@ public class CallResult<T> implements Serializable {
         return resultCodeInfo;
     }
 
+    public Integer getCode(){
+        return resultCodeInfo.getCode();
+    }
+
+    public String getMessage(){
+        return String.format(resultCodeInfo.getDesc(), args);
+    }
+
     public T getResult() {
         return result;
     }
