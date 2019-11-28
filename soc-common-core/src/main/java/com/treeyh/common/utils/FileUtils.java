@@ -18,7 +18,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * @author TreeYH
  * @version 1.0
- * @description 描述
+ * @description 描述, 参考 https://github.com/modouxiansheng/Doraemon/blob/f74b34ab3e59856714491fbf778e7626a2dc86de/aboutjava/src/main/java/aboutjava/file/FileCompress.java
  * @create 2019-11-28 19:05
  */
 public class FileUtils {
@@ -53,7 +53,7 @@ public class FileUtils {
 
             //获取读通道
             ReadableByteChannel readableByteChannel = pipe.source();
-            ByteBuffer buffer = ByteBuffer.allocate(((int) size));
+            ByteBuffer buffer = ByteBuffer.allocate(10240);
             while (readableByteChannel.read(buffer)>= 0) {
                 buffer.flip();
                 out.write(buffer);
