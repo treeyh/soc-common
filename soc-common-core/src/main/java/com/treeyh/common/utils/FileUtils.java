@@ -90,11 +90,6 @@ public class FileUtils {
 
 
 
-    public static void main(String[] args) {
-        String[] paths = new String[]{"/Users/tree/work/vps/my.cnf", "/Users/tree/work/vps/nginx.tar.gz", "/Users/tree/work/vps/phpstart.sh", "/Users/tree/work/vps/ssserver.sh"};
-        String zipPath = "/Users/tree/work/vps/zip.zip";
-        zipFilePip(zipPath, new ArrayList<>(Arrays.asList(paths)));
-    }
 
 
 }
