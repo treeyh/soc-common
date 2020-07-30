@@ -1,6 +1,6 @@
 package com.treeyh.common.model;
 
-import com.alibaba.fastjson.JSONObject;
+import com.treeyh.common.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,14 +81,14 @@ public class LogModel {
             this.datas.put("_serialId", this.serialId.incrementAndGet());
             if (purge) {
                 this.datas.put("handleCost", System.currentTimeMillis() - this.start);
-                JSONObject ja = (JSONObject)JSONObject.toJSON(this.datas);
+                String json = JsonUtils.toJson(this.datas);
                 this.purge();
-                return ja.toString();
+                return json;
             } else {
                 Map<String, Object> map = this.toMap();
                 map.put("handleCost", System.currentTimeMillis() - this.start);
-                JSONObject ja = (JSONObject)JSONObject.toJSON(map);
-                return ja.toString();
+                String json = JsonUtils.toJson(this.datas);
+                return json;
             }
         } catch (Exception var4) {
             logger.error(var4.getMessage(), var4);

@@ -1,6 +1,8 @@
 package com.treeyh.common.model.result;
 
-import com.alibaba.fastjson.annotation.JSONCreator;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 
@@ -39,8 +41,8 @@ public class ReturnResult<T> implements Serializable {
     }
 
     //解决多个构造函数的json转化冲突
-    @JSONCreator
-    public ReturnResult(Integer code, String message, T data) {
+    @JsonCreator
+    public ReturnResult(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("data") T data) {
         this.code = code;
         this.message = message;
         this.data = data;
